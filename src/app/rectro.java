@@ -2,7 +2,7 @@ package app;
 import java.awt.*;
 import javax.swing.*;
 
-class rectro extends JPanel
+public class rectro extends JPanel
 {
     private Color backgroundColor;
     private int cornerRadius = 15;
@@ -49,3 +49,5 @@ class rectro extends JPanel
         graphics.drawRoundRect(0, 0, width-1, height-1, arcs.width, arcs.height); //paint border
     }
 }
+
+
