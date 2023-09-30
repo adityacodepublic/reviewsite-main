@@ -41,12 +41,12 @@ public class home extends javax.swing.JFrame {
         poster_box = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
+        jPanel3 = new rectro(25);
         jLabel5 = new javax.swing.JLabel();
         mainframe = new javax.swing.JPanel();
         embeddvideo = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        review_panel = new javax.swing.JPanel();
+        review_panel = new rectro(25);
         Usertext = new javax.swing.JLabel();
 
 
@@ -126,6 +126,7 @@ public class home extends javax.swing.JFrame {
         jLabel3.setText("9/10");
 
         jPanel3.setBackground(new java.awt.Color(245, 199, 31));
+        jPanel3.setOpaque(false);
 
         jLabel5.setFont(new java.awt.Font("Franklin Gothic Demi Cond", 1, 36)); // NOI18N
         jLabel5.setText("IMDb");
@@ -199,6 +200,7 @@ public class home extends javax.swing.JFrame {
         jLabel1.setText("User Reviews");
 
         review_panel.setBackground(new java.awt.Color(255, 255, 255));
+        review_panel.setOpaque(false);
 
         Usertext.setBackground(new java.awt.Color(207, 207, 207));
         Usertext.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
