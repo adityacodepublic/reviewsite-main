@@ -4,10 +4,13 @@
  */
 package app;
 import javax.swing.ImageIcon;
+import javax.swing.JPanel;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.awt.Image;
 
 
-public class reviewsearch extends javax.swing.JFrame {
+public class reviewsearch extends JPanel {
 
     /**
      * Creates new form reviewsearch
@@ -31,7 +34,6 @@ public class reviewsearch extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -41,7 +43,7 @@ public class reviewsearch extends javax.swing.JFrame {
         search_box.setOpaque(false);
         search_box.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                search_boxActionPerformed(evt);
+                search.redirect(reviewsearch.this,search_box.getText());
             }
         });
 
@@ -49,6 +51,11 @@ public class reviewsearch extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Segoe UI Symbol", 0, 20)); // NOI18N
         jLabel4.setText("🔎");
         jLabel4.setForeground(java.awt.Color.WHITE);
+        jLabel4.addMouseListener(new MouseAdapter() { 
+            @Override
+            public void mouseClicked (MouseEvent e) {              
+                search.redirect(reviewsearch.this,search_box.getText());}
+        });
 
         //jLabe.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Image/icons8_Search_18px.png")).getImage().getScaledInstance(25, 25, Image.SCALE_SMOOTH)));
         jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -97,8 +104,8 @@ public class reviewsearch extends javax.swing.JFrame {
                 .addContainerGap(194, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
@@ -112,22 +119,14 @@ public class reviewsearch extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        pack();
+        
     }// </editor-fold>//GEN-END:initComponents
 
-    private void search_boxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_search_boxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_search_boxActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {

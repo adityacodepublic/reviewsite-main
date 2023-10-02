@@ -3,14 +3,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package app;
-public class searchpage extends javax.swing.JFrame {
 
-    /**
-     * Creates new form searchpage
-     */
+import javax.swing.JPanel;
+
+public class searchpage extends JPanel {
+
     public searchpage() {
         initComponents();
+
     }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -39,7 +41,6 @@ public class searchpage extends javax.swing.JFrame {
         search_box = new app.textbx(26);
         titles = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         result1.setBackground(new java.awt.Color(255, 255, 255));
         result1.setOpaque(false);
@@ -186,7 +187,7 @@ public class searchpage extends javax.swing.JFrame {
         search_btn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         search_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                search_btnActionPerformed(evt);
+                search.redirect(searchpage.this,search_box.getText());
             }
         });
 
@@ -194,7 +195,7 @@ public class searchpage extends javax.swing.JFrame {
         search_box.setBorder(javax.swing.BorderFactory.createCompoundBorder(search_box.getBorder(),javax.swing.BorderFactory.createEmptyBorder(5, 7, 5, 10)));
         search_box.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                search_boxActionPerformed(evt);
+                search.redirect(searchpage.this,search_box.getText());
             }
         });
 
@@ -222,8 +223,8 @@ public class searchpage extends javax.swing.JFrame {
         titles.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 48)); // NOI18N
         titles.setText("Titles");
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
@@ -246,7 +247,7 @@ public class searchpage extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        pack();
+    
     }// </editor-fold>//GEN-END:initComponents
 
     private void search_boxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_search_boxActionPerformed
@@ -285,11 +286,11 @@ public class searchpage extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new searchpage().setVisible(true);
-            }
-        });
+        // java.awt.EventQueue.invokeLater(new Runnable() {
+        //     public void run() {
+        //         new searchpage().setVisible(true);
+        //     }
+        // });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
