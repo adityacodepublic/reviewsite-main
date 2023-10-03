@@ -4,15 +4,23 @@
  */
 package app;
 
-import javax.swing.JPanel;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Image;
+import javax.swing.ImageIcon;
+import javax.swing.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class searchpage extends JPanel {
+    private YourApp app;
+    //YourApp yourapp =  new YourApp();
 
-    public searchpage() {
+    public searchpage(YourApp app) {
+        this.app = app;
         initComponents();
 
     }
-
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -22,241 +30,520 @@ public class searchpage extends JPanel {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-
-        result_box = new javax.swing.JPanel();
-        img1 = new javax.swing.JLabel();
-        title1 = new javax.swing.JLabel();
-        cate1 = new javax.swing.JLabel();
-        img2 = new javax.swing.JLabel();
-        title2 = new javax.swing.JLabel();
-        cate2 = new javax.swing.JLabel();
-        result1 = new rectro(35);
-        result2 = new rectro(35);
-        result3 = new rectro(35);
-        img3 = new javax.swing.JLabel();
-        title3 = new javax.swing.JLabel();
-        cate3 = new javax.swing.JLabel();
         searchbar = new javax.swing.JPanel();
-        search_btn = new javax.swing.JButton();
         search_box = new app.textbx(26);
+        jPanel5 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         titles = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        result4 = new javax.swing.JPanel();
+        result5 = new rectro(47);
+        result6 = new rectro(47);
+        result7 = new rectro(47);
+        result8 = new rectro(47);
+        result9 = new rectro(47);
+        img5 = new javax.swing.JLabel();
+        title5 = new javax.swing.JLabel();
+        cate5 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        img6 = new javax.swing.JLabel();
+        title6 = new javax.swing.JLabel();
+        cate6 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        img7 = new javax.swing.JLabel();
+        title7 = new javax.swing.JLabel();
+        cate7 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        img8 = new javax.swing.JLabel();
+        title8 = new javax.swing.JLabel();
+        cate8 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        img9 = new javax.swing.JLabel();
+        title9 = new javax.swing.JLabel();
+        cate9 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
 
-
-        result1.setBackground(new java.awt.Color(255, 255, 255));
-        result1.setOpaque(false);
-
-        img1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/download.jpg"))); // NOI18N
-
-        title1.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 24)); // NOI18N
-        title1.setText("Movie Title");
-        title1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        cate1.setText("Category");
-
-        javax.swing.GroupLayout result1Layout = new javax.swing.GroupLayout(result1);
-        result1.setLayout(result1Layout);
-        result1Layout.setHorizontalGroup(
-            result1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(result1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(img1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(result1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(title1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cate1))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        result1Layout.setVerticalGroup(
-            result1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(result1Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(result1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(result1Layout.createSequentialGroup()
-                        .addComponent(title1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cate1))
-                    .addComponent(img1, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(18, Short.MAX_VALUE))
-        );
-
-        result2.setBackground(new java.awt.Color(255, 255, 255));
-        result2.setOpaque(false);
-
-        img2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/download.jpg"))); // NOI18N
-
-        title2.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 24)); // NOI18N
-        title2.setText("Movie Title");
-        title2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        cate2.setText("Category");
-
-        javax.swing.GroupLayout result2Layout = new javax.swing.GroupLayout(result2);
-        result2.setLayout(result2Layout);
-        result2Layout.setHorizontalGroup(
-            result2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(result2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(img2, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(result2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(title2, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cate2))
-                .addContainerGap(808, Short.MAX_VALUE))
-        );
-        result2Layout.setVerticalGroup(
-            result2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(result2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(result2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(result2Layout.createSequentialGroup()
-                        .addComponent(title2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cate2))
-                    .addComponent(img2, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(17, Short.MAX_VALUE))
-        );
-
-        result3.setBackground(new java.awt.Color(255, 255, 255));
-        result3.setOpaque(false);
-    
-
-        img3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/download.jpg"))); // NOI18N
-
-        title3.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 24)); // NOI18N
-        title3.setText("Movie Title");
-        title3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        cate3.setText("category");
-
-        javax.swing.GroupLayout result3Layout = new javax.swing.GroupLayout(result3);
-        result3.setLayout(result3Layout);
-        result3Layout.setHorizontalGroup(
-            result3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(result3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(img3, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(result3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(title3, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cate3))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        result3Layout.setVerticalGroup(
-            result3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(result3Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(result3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(result3Layout.createSequentialGroup()
-                        .addComponent(title3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cate3))
-                    .addComponent(img3, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(18, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout result_boxLayout = new javax.swing.GroupLayout(result_box);
-        result_box.setLayout(result_boxLayout);
-        result_boxLayout.setHorizontalGroup(
-            result_boxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(result_boxLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(result_boxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(result2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(result1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(result3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        result_boxLayout.setVerticalGroup(
-            result_boxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, result_boxLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(result2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15)
-                .addComponent(result3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(result1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(30, Short.MAX_VALUE))
-        );
+        setBackground(new java.awt.Color(230, 230, 230));
 
         searchbar.setBackground(new java.awt.Color(11, 11, 11));
 
-        search_btn.setBackground(new java.awt.Color(0, 0, 0));
-        search_btn.setFont(new java.awt.Font("Segoe UI Symbol", 0, 20)); // NOI18N
-        search_btn.setText("🔎");
-        search_btn.setForeground(java.awt.Color.WHITE);
-        search_btn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        search_btn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                search.redirect(searchpage.this,search_box.getText());
-            }
-        });
-
-        search_box.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        search_box.setBorder(javax.swing.BorderFactory.createCompoundBorder(search_box.getBorder(),javax.swing.BorderFactory.createEmptyBorder(5, 7, 5, 10)));
+        search_box.setForeground(new java.awt.Color(11, 11, 11));
+        search_box.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        search_box.setOpaque(false);
+        search_box.setBorder(javax.swing.BorderFactory.createCompoundBorder(search_box.getBorder(),javax.swing.BorderFactory.createEmptyBorder(5, 10, 7, 10)));
         search_box.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 search.redirect(searchpage.this,search_box.getText());
             }
         });
 
+        jPanel5.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+
+        
+        jLabel5.setFont(new java.awt.Font("Segoe UI Symbol", 0, 29)); // NOI18N
+        jLabel5.setText("🔍");
+        jLabel5.setForeground(Color.WHITE);
+        jLabel5.setBackground(new java.awt.Color(11,11,11));
+
+        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel5.addMouseListener(new MouseAdapter() { 
+            @Override
+            public void mouseClicked (MouseEvent e) {              
+                search.redirect(searchpage.this,search_box.getText());}
+        });
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel5)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel5)
+                .addContainerGap(8, Short.MAX_VALUE))
+        );
+
+        jLabel7.setFont(new java.awt.Font("Calibri", 0, 26)); // NOI18N
+        jLabel7.setText("←");
+        jLabel7.setForeground(Color.WHITE);
+        jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel7.addMouseListener(new MouseAdapter() { public void mouseClicked(MouseEvent e) { app.goBack(); } });
+        
         javax.swing.GroupLayout searchbarLayout = new javax.swing.GroupLayout(searchbar);
         searchbar.setLayout(searchbarLayout);
         searchbarLayout.setHorizontalGroup(
             searchbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(searchbarLayout.createSequentialGroup()
-                .addGap(294, 294, 294)
-                .addComponent(search_btn)
-                .addGap(0, 0, 0)
+                .addComponent(jLabel7)
+                .addGap(300, 300, 300)
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(search_box, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(339, Short.MAX_VALUE))
+                .addContainerGap(437, Short.MAX_VALUE))
         );
         searchbarLayout.setVerticalGroup(
             searchbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(searchbarLayout.createSequentialGroup()
                 .addGap(13, 13, 13)
-                .addGroup(searchbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(search_btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(search_box, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(15, 15, 15))
+                .addGroup(searchbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(search_box)
+                    .addGroup(searchbarLayout.createSequentialGroup()
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
 
         titles.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 48)); // NOI18N
         titles.setText("Titles");
+        titles.setPreferredSize(new java.awt.Dimension(160, 55));
+
+        jScrollPane1.setBorder(null);
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(100, 500));
+
+        result4.setBackground(new java.awt.Color(230, 230, 230));
+        result4.setForeground(new java.awt.Color(230, 230, 230));
+        // result4.setOpaque(false);
+
+        
+        result5.setBackground(new java.awt.Color(255,255,255));
+        result5.setPreferredSize(new java.awt.Dimension(300, 168));
+        result5.setOpaque(false);
+
+        img5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/download.jpg"))); // NOI18N
+
+        title5.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 24)); // NOI18N
+        title5.setText("Movie Title");
+        title5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        title5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                title5MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                title5MouseExited(evt);
+            }
+        });
+
+        cate5.setText("Category");
+
+        jLabel1.setText("Rating : 9.1");
+
+        javax.swing.GroupLayout result5Layout = new javax.swing.GroupLayout(result5);
+        result5.setLayout(result5Layout);
+        result5Layout.setHorizontalGroup(
+            result5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(result5Layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(img5, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38)
+                .addGroup(result5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(title5, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1)
+                    .addComponent(cate5))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        result5Layout.setVerticalGroup(
+            result5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, result5Layout.createSequentialGroup()
+                .addContainerGap(17, Short.MAX_VALUE)
+                .addGroup(result5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(result5Layout.createSequentialGroup()
+                        .addComponent(title5, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(cate5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel1))
+                    .addComponent(img5, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 17, Short.MAX_VALUE))
+        );
+
+        result6.setBackground(new java.awt.Color(255, 255, 255));
+        result6.setPreferredSize(new java.awt.Dimension(1016, 168));
+        result6.setOpaque(false);
+
+        title6.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 24)); // NOI18N
+        title6.setText("Movie Title");
+        title6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        title6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                title6MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                title6MouseExited(evt);
+            }
+        });
+
+        cate6.setText("Category");
+
+        jLabel2.setText("Rating : 9.1");
+
+        javax.swing.GroupLayout result6Layout = new javax.swing.GroupLayout(result6);
+        result6.setLayout(result6Layout);
+        result6Layout.setHorizontalGroup(
+            result6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(result6Layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(img6, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35)
+                .addGroup(result6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(title6, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cate6)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(599, Short.MAX_VALUE))
+        );
+        result6Layout.setVerticalGroup(
+            result6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(result6Layout.createSequentialGroup()
+                .addContainerGap(17, Short.MAX_VALUE)
+                .addGroup(result6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(result6Layout.createSequentialGroup()
+                        .addComponent(title6, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(cate6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(68, 68, 68))
+                    .addGroup(result6Layout.createSequentialGroup()
+                        .addComponent(img6, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(17, Short.MAX_VALUE))))
+        );
+
+        ImageIcon imageIcon = new ImageIcon(new ImageIcon(getClass().getResource("/Image/download.jpg"))
+            .getImage().getScaledInstance(178, 283, Image.SCALE_SMOOTH));
+
+        img6.setIcon(imageIcon);
+        img6.getAccessibleContext().setAccessibleDescription("");
+
+        result7.setBackground(new java.awt.Color(255, 255, 255));
+        result7.setPreferredSize(new java.awt.Dimension(1016, 168));
+        result7.setOpaque(false);
+
+
+        img7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/download.jpg"))); // NOI18N
+
+        title7.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 24)); // NOI18N
+        title7.setText("Movie Title");
+        title7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        title7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                title7MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                title7MouseExited(evt);
+            }
+        });
+
+        cate7.setText("Category");
+
+        jLabel4.setText("Rating : 9.1");
+
+        javax.swing.GroupLayout result7Layout = new javax.swing.GroupLayout(result7);
+        result7.setLayout(result7Layout);
+        result7Layout.setHorizontalGroup(
+            result7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(result7Layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(img7, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(39, 39, 39)
+                .addGroup(result7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(title7, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cate7)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(595, Short.MAX_VALUE))
+        );
+        result7Layout.setVerticalGroup(
+            result7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(result7Layout.createSequentialGroup()
+                .addContainerGap(17, Short.MAX_VALUE)
+                .addGroup(result7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, result7Layout.createSequentialGroup()
+                        .addComponent(title7, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(cate7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(68, 68, 68))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, result7Layout.createSequentialGroup()
+                        .addComponent(img7, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(17, 17, 17))))
+        );
+
+        result8.setBackground(new java.awt.Color(255, 255, 255));
+        result8.setOpaque(false);
+        img8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/download.jpg"))); // NOI18N
+
+        title8.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 24)); // NOI18N
+        title8.setText("Movie Title");
+        title8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        title8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                title8MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                title8MouseExited(evt);
+            }
+        });
+
+        cate8.setText("Category");
+
+        jLabel3.setText("Rating : 9.1");
+
+        javax.swing.GroupLayout result8Layout = new javax.swing.GroupLayout(result8);
+        result8.setLayout(result8Layout);
+        result8Layout.setHorizontalGroup(
+            result8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(result8Layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(img8, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37)
+                .addGroup(result8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(title8, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cate8)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(597, Short.MAX_VALUE))
+        );
+        result8Layout.setVerticalGroup(
+            result8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(result8Layout.createSequentialGroup()
+                .addContainerGap(17, Short.MAX_VALUE)
+                .addGroup(result8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(result8Layout.createSequentialGroup()
+                        .addComponent(title8, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(1, 1, 1)
+                        .addComponent(cate8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(img8, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 17, Short.MAX_VALUE))
+        );
+
+        result9.setBackground(new java.awt.Color(255, 255, 255));
+        result9.setPreferredSize(new java.awt.Dimension(427, 168));
+        result9.setOpaque(false);
+
+        img9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/download.jpg"))); // NOI18N
+
+        title9.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 24)); // NOI18N
+        title9.setText("Movie Title");
+        title9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        title9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                title9MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                title9MouseExited(evt);
+            }
+        });
+
+        cate9.setText("Category");
+
+        jLabel6.setText("Rating : 9.1");
+
+        javax.swing.GroupLayout result9Layout = new javax.swing.GroupLayout(result9);
+        result9.setLayout(result9Layout);
+        result9Layout.setHorizontalGroup(
+            result9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(result9Layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(img9, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(39, 39, 39)
+                .addGroup(result9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(title9, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cate9)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(595, Short.MAX_VALUE))
+        );
+        result9Layout.setVerticalGroup(
+            result9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(result9Layout.createSequentialGroup()
+                .addContainerGap(17, Short.MAX_VALUE)
+                .addGroup(result9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, result9Layout.createSequentialGroup()
+                        .addComponent(title9, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(cate9)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(68, 68, 68))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, result9Layout.createSequentialGroup()
+                        .addComponent(img9, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(17, 17, 17))))
+        );
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout result4Layout = new javax.swing.GroupLayout(result4);
+        result4.setLayout(result4Layout);
+        result4Layout.setHorizontalGroup(
+            result4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(result4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(result4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(result4Layout.createSequentialGroup()
+                        .addGroup(result4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(result6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(result8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(result7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(result9, javax.swing.GroupLayout.DEFAULT_SIZE, 1016, Short.MAX_VALUE)
+                            .addComponent(result5, javax.swing.GroupLayout.DEFAULT_SIZE, 1016, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        result4Layout.setVerticalGroup(
+            result4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(result4Layout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addComponent(result6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(result5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(result8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(result7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(result9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jScrollPane1.setViewportView(result4);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+            .addComponent(searchbar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(12, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(result_box, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(titles, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(searchbar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1024, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(100, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(searchbar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(15, 15, 15)
                 .addComponent(titles, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(result_box, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 522, Short.MAX_VALUE)
+                .addGap(0, 0, 0))
         );
+        jScrollPane1.getVerticalScrollBar().setUnitIncrement(14);
+        jScrollPane1.getVerticalScrollBar().setPreferredSize(new Dimension(0,0));
+        jScrollPane1.setBackground(new java.awt.Color(230,230,230));
+        jScrollPane1.setForeground(new java.awt.Color(230,230,230));
+        jScrollPane1.getHorizontalScrollBar().setPreferredSize(new Dimension(0,0));
 
-    
+        
     }// </editor-fold>//GEN-END:initComponents
 
     private void search_boxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_search_boxActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_search_boxActionPerformed
 
-    private void search_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_search_btnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_search_btnActionPerformed
+    private void title6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_title6MouseEntered
+    title6.setForeground(new Color(153,153,153));        // TODO add your handling code here:
+    }//GEN-LAST:event_title6MouseEntered
+
+    private void title6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_title6MouseExited
+      title6.setForeground(new Color(0,0,0));    // TODO add your handling code here:
+    }//GEN-LAST:event_title6MouseExited
+
+    private void title5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_title5MouseEntered
+   title5.setForeground(new Color(153,153,153));         // TODO add your handling code here:
+    }//GEN-LAST:event_title5MouseEntered
+
+    private void title5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_title5MouseExited
+   title5.setForeground(new Color(0,0,0));          // TODO add your handling code here:
+    }//GEN-LAST:event_title5MouseExited
+
+    private void title8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_title8MouseEntered
+title8.setForeground(new Color(153,153,153));          // TODO add your handling code here:
+    }//GEN-LAST:event_title8MouseEntered
+
+    private void title8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_title8MouseExited
+title8.setForeground(new Color(0,0,0));          // TODO add your handling code here:
+    }//GEN-LAST:event_title8MouseExited
+
+    private void title7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_title7MouseEntered
+title7.setForeground(new Color(153,153,153));          // TODO add your handling code here:
+    }//GEN-LAST:event_title7MouseEntered
+
+    private void title7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_title7MouseExited
+title7.setForeground(new Color(0,0,0));          // TODO add your handling code here:
+    }//GEN-LAST:event_title7MouseExited
+
+    private void title9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_title9MouseEntered
+title9.setForeground(new Color(153,153,153));          // TODO add your handling code here:
+    }//GEN-LAST:event_title9MouseEntered
+
+    private void title9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_title9MouseExited
+title9.setForeground(new Color(0,0,0));          // TODO add your handling code here:
+    }//GEN-LAST:event_title9MouseExited
 
     /**
      * @param args the command line arguments
@@ -285,31 +572,48 @@ public class searchpage extends JPanel {
         }
         //</editor-fold>
 
-        /* Create and display the form */
-        // java.awt.EventQueue.invokeLater(new Runnable() {
-        //     public void run() {
-        //         new searchpage().setVisible(true);
-        //     }
-        // });
+    //     /* Create and display the form */
+    //     java.awt.EventQueue.invokeLater(new Runnable() {
+    //         public void run() {
+    //             new searchpage().setVisible(true);
+    //         }
+    //     });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel cate1;
-    private javax.swing.JLabel cate2;
-    private javax.swing.JLabel cate3;
-    private javax.swing.JLabel img1;
-    private javax.swing.JLabel img2;
-    private javax.swing.JLabel img3;
-    private javax.swing.JPanel result1;
-    private javax.swing.JPanel result2;
-    private javax.swing.JPanel result3;
-    private javax.swing.JPanel result_box;
+    private javax.swing.JLabel cate5;
+    private javax.swing.JLabel cate6;
+    private javax.swing.JLabel cate7;
+    private javax.swing.JLabel cate8;
+    private javax.swing.JLabel cate9;
+    private javax.swing.JLabel img5;
+    private javax.swing.JLabel img6;
+    private javax.swing.JLabel img7;
+    private javax.swing.JLabel img8;
+    private javax.swing.JLabel img9;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JPanel result4;
+    private javax.swing.JPanel result5;
+    private javax.swing.JPanel result6;
+    private javax.swing.JPanel result7;
+    private javax.swing.JPanel result8;
+    private javax.swing.JPanel result9;
     private javax.swing.JTextField search_box;
-    private javax.swing.JButton search_btn;
     private javax.swing.JPanel searchbar;
-    private javax.swing.JLabel title1;
-    private javax.swing.JLabel title2;
-    private javax.swing.JLabel title3;
+    private javax.swing.JLabel title5;
+    private javax.swing.JLabel title6;
+    private javax.swing.JLabel title7;
+    private javax.swing.JLabel title8;
+    private javax.swing.JLabel title9;
     private javax.swing.JLabel titles;
     // End of variables declaration//GEN-END:variables
 }

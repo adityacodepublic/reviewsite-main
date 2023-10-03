@@ -14,6 +14,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 
+
 public class home extends JPanel {
     private YourApp app;
     //YourApp yourapp =  new YourApp();
@@ -43,12 +44,13 @@ public class home extends JPanel {
         jLabel3 = new javax.swing.JLabel();
         jPanel3 = new rectro(25);
         jLabel5 = new javax.swing.JLabel();
-        backk = new javax.swing.JButton();
+
         mainframe = new javax.swing.JPanel();
         embeddvideo = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         review_panel = new rectro(25);
         Usertext = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
 
 
 
@@ -78,17 +80,18 @@ public class home extends JPanel {
         jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel4.addMouseListener(new MouseAdapter() { 
             @Override
-            public void mouseClicked (MouseEvent e) {              
+            public void mouseClicked (MouseEvent e) {            
                 search.redirect(home.this,search_box.getText());}
         });
 
 
 
-        backk.setFont(new java.awt.Font("Segoe UI Symbol", 0, 20)); // NOI18N
-        backk.setText("⬅️");
-        backk.setForeground(Color.WHITE);
-        backk.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        backk.addActionListener(e -> app.goBack());
+        jLabel7.setFont(new java.awt.Font("Calibri", 0, 26)); // NOI18N
+        jLabel7.setText("←");
+        jLabel7.setForeground(Color.WHITE);
+        jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel7.addMouseListener(new MouseAdapter() { public void mouseClicked(MouseEvent e) { app.goBack(); } });
+
 
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -99,7 +102,7 @@ public class home extends JPanel {
                 .addContainerGap()
                 .addComponent(jLabel4)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addComponent(backk)
+                
                 
         );
         jPanel4Layout.setVerticalGroup(
@@ -108,7 +111,7 @@ public class home extends JPanel {
                 .addContainerGap()
                 .addComponent(jLabel4)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addComponent(backk)
+                
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -116,6 +119,7 @@ public class home extends JPanel {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jLabel7)
                 .addGap(317, 317, 317)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
@@ -126,10 +130,13 @@ public class home extends JPanel {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(10, 10, 10)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(search_box)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(13, Short.MAX_VALUE))
+                    .addComponent(search_box)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
@@ -343,7 +350,6 @@ public class home extends JPanel {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JButton backk;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -352,5 +358,6 @@ public class home extends JPanel {
     private javax.swing.JLabel poster_box;
     private javax.swing.JPanel review_panel;
     private javax.swing.JTextField search_box;
+    private javax.swing.JLabel jLabel7;
     // End of variables declaration//GEN-END:variables
 }

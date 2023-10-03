@@ -22,9 +22,9 @@ public class YourApp extends JFrame {
 
         // Add your different "pages" to the cardPanel
         cardPanel.add(new home(this), "home");
-
+        cardPanel.add(new searchpage(this), "searchpage");
         cardPanel.add(new reviewsearch(), "reviewsearch");
-        cardPanel.add(new searchpage(), "searchpage");
+        
 
 
         add(cardPanel, BorderLayout.CENTER);
